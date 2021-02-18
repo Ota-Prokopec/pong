@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+div.start {
+  position: absolute;
+  left:244px;
+}
+div.wrap {
+  display: none;
+  align-content: center;
+  justify-content: center;
+}
+div.all {
+  height: 100vh;
+  width: 100vw;
+  background: lightblue;
+  position: absolute;
+
+}
+div.options__start {
+  
+}
+div.play__array {
+  position: absolute;
+  left:0px;
+  height: 444px;
+  width: 864px;
+  background: #000;
+}
+div.score {
+  position: absolute;
+  left:200px;
+}
+div.hranic {
+  height: 444px;
+  background: white;
+  position: absolute;
+  opacity: 0.4;
+  width: 14px;
+  left:430px;
+  top:0;
+}
+div.options {
+  position: absolute;
+}
+div.ball {
+  height: 44px;
+  width: 44px;
+  border-radius: 100%;
+  background: #fff;
+  position: absolute;
+  left:422px;
+  top:200px;
+}
+div.boddva {
+  position: absolute;
+  left:444px;
+}
+
+
+
+div.boddva {
+  position: absolute;
+  left:284px;
+  top:14px;
+  color:white;
+  font-size: 44px;
+}
+div.bodjedna {
+  position: absolute;
+  left:164.44px;
+  top:14px;
+  color:white;
+  font-size: 44px;
+}
+div.play__two {
+  position: absolute;
+  left:0px;
+  top:0px;
+  height: 144px;
+  width: 44px;
+  background: #fff;
+}
+div.play__one {
+  position: absolute;
+  left:820px;
+  top:0px;
+  height: 144px;
+  width: 44px;
+  background: #fff;
+}
