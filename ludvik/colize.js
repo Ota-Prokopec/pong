@@ -57,7 +57,6 @@ function colision(element, secondelement) {
 
     ////console.log(el__right > array__left && array__right > el__left && el__top < array__bottom && array__top < el__bottom);
     if ( el__right > array__left && array__right > el__left && el__top < array__bottom && array__top < el__bottom  ) {
-        console.log( el__bottom < array__top + 14);
       if (el__bottom < array__top + options.delkaodrazustrana) {
         nahoru(ball, "to top");
       }

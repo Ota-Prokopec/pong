@@ -7,22 +7,42 @@ body {
 }
 div.start {
   position: absolute;
-  left:244px;
+  left:14px;
+}
+div.position {
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 div.wrap {
   display: none;
   align-content: center;
   justify-content: center;
 }
+div.score {
+  position: absolute;
+  height: 144px;
+  width: 44px;
+}
 div.all {
   height: 100vh;
   width: 100vw;
   background: lightblue;
-  position: absolute;
 
 }
 div.options__start {
-  
+     display: grid;
+     height: 100px;
+     width: 200px;
+     align-content: center;
+     justify-content: center;
+
+}
+button {
+  border: 1px solid lightblue;
+}
+button:hover {
+  background:lightblue;
 }
 div.play__array {
   position: absolute;
@@ -33,7 +53,8 @@ div.play__array {
 }
 div.score {
   position: absolute;
-  left:200px;
+  left:144px;
+  width: 444px;
 }
 div.hranic {
   height: 444px;
@@ -43,6 +64,16 @@ div.hranic {
   width: 14px;
   left:430px;
   top:0;
+}
+div.ioptions {
+display: grid;
+align-content: center;
+justify-content: center;
+}
+input {
+  position: relative;
+  height: 14px;
+  width: 190.4px;
 }
 div.options {
   position: absolute;
@@ -56,10 +87,7 @@ div.ball {
   left:422px;
   top:200px;
 }
-div.boddva {
-  position: absolute;
-  left:444px;
-}
+
 
 
 
@@ -72,10 +100,13 @@ div.boddva {
 }
 div.bodjedna {
   position: absolute;
-  left:164.44px;
+  left:4px;
   top:14px;
   color:white;
   font-size: 44px;
+}
+div.help {
+
 }
 div.play__two {
   position: absolute;

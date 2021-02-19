@@ -14,9 +14,9 @@ function zobrazeni() {
 document.getElementById("wrap").style.display = "block";
 }
 function auto() {
-
        if (ball.offsetTop + 44 > playone.offsetTop + playone.offsetHeight) {
          map.s = true;
+
        }
        else if  (ball.offsetHeight + ball.offsetTop < playone.offsetTop + 44) {
          map.w = true;
@@ -25,5 +25,6 @@ function auto() {
          map.s = false;
          map.w = false;
        }
+
 
 }

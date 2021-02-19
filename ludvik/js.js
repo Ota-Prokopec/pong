@@ -5,22 +5,29 @@ let wantauto = false;
 let velkostskok = Math.floor(Math.random()*444) + 144;
 let animationno;
 let removerequest;
+/*options here, you can do another if you will look to options.js*/
 const options = {
    vyhra : 4,
    delkaodrazustrana : 44,
-   rychlostmice :14,
-  rychlost__play :16
-
+   rychlostmice :44,
+  rychlost__play :14,
+  napodobeninaryhlost:44,
+  win:4
 }
+let pomocna = 44;
+/*options*/
 const playone = document.getElementById("play__one");
 const array = document.getElementById("array");
 let rychlost;
+/*map of arrow*/
 const map = {
   ArrowUP:false,
   ArrowDown:false,
   s:false,
   w:false
 };
+/*map*/
+/*first keydown event*/
 window.addEventListener("keydown", function (event) {
 
   ////console.log(event);
@@ -38,26 +45,32 @@ window.addEventListener("keydown", function (event) {
   }
 
 })
+/*keydown*/
 let pocetstart = 0;
 let framecancel;
-
-document.getElementById("start").addEventListener("click", function (event) {
-
-  pocetstart ++;
-  if (pocetstart % 2) {
-
-    window.cancelAnimationFrame(framecancel);
-
-    window.cancelAnimationFrame(removerequest);
-    window.cancelAnimationFrame(animationno);
+/*cancel of frames in window.requestAnimationFrame*/ // => =>
+function dontfunction() {                                   //>
+  window.cancelAnimationFrame(framecancel);                     //>
+  window.cancelAnimationFrame(removerequest);                       //>
+  window.cancelAnimationFrame(animationno);                               //>
+}                                                                              //>
+document.getElementById("start").addEventListener("click", function (event) {  //>
+                                                                                //>
+  pocetstart ++;   /////////////////////////////////////////////////////////////  <
+  if (pocetstart % 2) { ///////////here is frame of funciont dontfuncion<
+      document.getElementById("start").innerHTML="stop";
+    framecancel = window.requestAnimationFrame(push);
   }
   else {
-    document.getElementById("start").innerHTML="stop";
-    framecancel = window.requestAnimationFrame(push);
+      /*remove request same like at dontfunction*/
+    window.cancelAnimationFrame(framecancel);
+    window.cancelAnimationFrame(removerequest);
+    window.cancelAnimationFrame(animationno);
   }
 
 
 })
+///////////*push starts everything*/
 function push() {
   if (wantauto) {
     auto();
@@ -65,15 +78,16 @@ function push() {
     klavesa();
       balles();
     coli();
+    colisionballforrychlost();
     framecancel = window.requestAnimationFrame(push);
 }
   function klavesa() {
     if (map.ArrowUP === true) {
-      ////console.log("arrowup");
+      ////arrowup
         playtwo.style.top = playtwo.offsetTop - 16 + "px";
     }
     if (map.ArrowDown === true) {
-      ////console.log("arrowdown");
+      ////arrowdown
       playtwo.style.top = playtwo.offsetTop + 16 + "px";
     }
     if (map.s === true) {
@@ -105,8 +119,8 @@ function push() {
        playone.style.top = playone.offsetTop + 16 + "px";
      }
      if (co1[2] === "bottom") {
-       console.log("ahoj");
-       console.log("ahoj");
+       //console.log("ahoj");
+       //console.log("ahoj");
        playone.style.top = playone.offsetTop - 16 + "px";
      }
    }

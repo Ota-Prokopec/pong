@@ -8,7 +8,10 @@ let colisionball = colisioninarray(ball, array);
 const moveballss = moveball(ball, colisionball);
 let leftstrana = 0;
 let rightstarana = 0;
+let rightwin = 0;
+let leftwin = 0;
 function balles() {
+  wins();
   const cooneside = colision(ball, playtwo);
   const cotwoside = colision(ball, playone);
 
@@ -16,27 +19,33 @@ function balles() {
     function play() {
       colisionball = colisioninarray(ball, array);
      moveball(ball, colisionball);
-     animate();
+
+
+     for (let pos = 0; pos < options.rychlostmice; pos++) {
+       animate();
+     }
     }
 
     function animate() {
 
       if (pocet % 2) {
         if (cooneside) {
-            ball.style.left = ball.offsetLeft + 16 + "px";
+            ball.style.left = ball.offsetLeft + 1 + "px";
         }
         else {
           pocet ++;
-            ball.style.left = ball.offsetLeft - 16 + "px";
+              rychlostmeneni();
+            ball.style.left = ball.offsetLeft - 1 + "px";
         }
       }
       else {
         if (cotwoside) {
-            ball.style.left = ball.offsetLeft - 16 + "px";
+            ball.style.left = ball.offsetLeft - 1 + "px";
         }
         else {
           pocet ++;
-            ball.style.left = ball.offsetLeft + 16 + "px";
+              rychlostmeneni();
+            ball.style.left = ball.offsetLeft + 1 + "px";
         }
       }
 
@@ -49,10 +58,10 @@ function balles() {
       if (colisionball[2] === "right") {
         leftstrana ++;
         if (leftstrana === options.vyhra) {
-          b1.innerHTML = "win";
-          b2.innerHTML = "lose";
-          leftstrana = 0;
-          rightstrana = 0;
+        leftwin ++;
+        b2.innerHTML = "lost";
+        b1.innerHTML = "win";
+          nullthis();
         }
         else {
           b1.innerHTML = leftstrana;
@@ -62,10 +71,10 @@ function balles() {
       else if (colisionball[2] === "left") {
         rightstarana ++;
         if (rightstarana === options.vyhra) {
-          b1.innerHTML = "lose";
+          rightwin ++;
           b2.innerHTML = "win";
-          leftstrana = 0;
-          rightstarana = 0;
+          b1.innerHTML = "lost";
+          nullthis();
         }
         else {
           b2.innerHTML = rightstarana;
@@ -73,7 +82,68 @@ function balles() {
         respawnball(ball, 422);
       }
     }
+
   }
 
 
+}
+
+function wins() {
+  if (rightwin === options.win || leftwin === options.win) {
+    if (rightwin > leftwin) {
+      b2.innerHTML = "win everything";
+      options.rychlostmice = 0;
+    }
+    else if (leftwin > rightwin) {
+      b1.innerHTML = "win everything";
+      options.rychlostmice = 0;
+    }
+           setTimeout(() => {
+             window.location.reload();
+           } ,1444);
+  }
+
+}
+function functionName() {
+
+}
+function rychlostmeneni() {
+  //rychlostmic
+  if (!norfa) {
+    options.rychlostmice --;
+    pomocna --;
+    if (pomocna > 44) {
+      options.rychlostmice = 4;
+    }
+  if (pomocna < 4) {
+    options.rychlostmice = 4;
+    pomocna = 11111111111;
+
+
+
+
+
+    createball();
+  }
+  }
+  else if (norfa) {
+    options.rychlostmice = Math.floor(Math.random()*44);
+    if (options.rychlostmice < 4 || options.rychlostmice === 4) {
+      options.rychlostmice = 4;
+    }
+    console.log(options.rychlostmice);
+  }
+
+
+}
+function nullthis() {
+  leftstrana = 0;
+  rightstarana = 0;
+  pomocna = 44;
+  options.rychlostmice = 44;
+  if (element != undefined) {
+    element.remove();
+  }
+  prvnibodpouzit = 0;
+  druhybodpouzit = 0;
 }

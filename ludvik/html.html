@@ -6,18 +6,27 @@
 
     <script src="colize.js" defer charset="utf-8"></script>
     <script src="one.js"defer charset="utf-8"></script>
+
+
+    <script src="velikost.js" defer charset="utf-8"></script>
+    <script src="options.js" defer charset="utf-8"></script>
+    <script src="slownormal.js" defer charset="utf-8"></script>
     <script src="moveball.js"defer charset="utf-8"></script>
+    <script src="createball.js" defer charset="utf-8"></script>
+    <script src="createElement.js" defer charset="utf-8"></script>
     <script src="auto.js"defer charset="utf-8"></script>
+    <script src="boos.js" charset="utf-8"></script>
     <script src="mice.js" defer charset="utf-8"></script>
     <script src="js.js" defer charset="utf-8"></script>
     <title></title>
   </head>
   <body>
+
      <div class="all">
 
         <div id="wrap" class="wrap">
           <div id="array" class="play__array">
-            <div class="score">
+            <div id="bod" class="score">
               <div id="bodjedna" class="bodjedna">
               </div>
 
@@ -28,20 +37,33 @@
               <div id="ball" class="ball"></div>
               <div id="play__two" class="play__one"></div>
               <div id="play__one" class="play__two"></div>
-              <div class="hranic"></div>
+              <div id="hra" class="hranic"></div>
           </div>
         </div>
-        <div class="options__start">
-          <div id="options" class="options">
-            <button type="button" id="auto" name="button">for one player</button>
-            <button type="button" id="noauto" name="button">for two players</button>
-          </div>
-          <div class="start">
-            <button type="button" id="start" name="button">play</button>
-          </div>
+        <div class="position">
+          <div id="options__start" class="options__start">
+                <div id="options" class="options">
+                         <button type="button" id="auto" name="button">for one player</button>
+                         <button type="button" id="noauto" name="button">for two players</button>
+                     <div class="ioptions">
+                         <input type="text" placeholder="délka vyhrání" id="vyhra" name="" value="">
+                         <input type="text" placeholder="délka odrazu" id="delkaodrazustrana" name="" value="">
+                         <input type="text" placeholder="délka kol" id="win" name="" value="">
+                         <div class="vysvetleni">
+                            <div class="help">the right player is moving helping the Arrows down and up</div>
+                            <div class="help" >the left player is moving helping keys s and w</div>
+                         </div>
+                         <button type="button" id="slow" name="button">slow  ness</button>
+                         <button type="button" id="normal" name="button">random rychlost</button>
+                     </div>
+                </div>
+             <div class="start">
+                         <button type="button" id="start" name="button">play</button>
+             </div>
+         </div>
         </div>
-
-
      </div>
+
+
   </body>
 </html>
