@@ -6,7 +6,7 @@ window.addEventListener("keydown", function (event) {
      if (event.key === "Enter") {
        if (prvnibodpouzit < rightstarana) {
          console.log("turbo");
-         options.rychlostmice = 44;
+         options.rychlostmice = 51;
          prvnibodpouzit ++;
        }
        setTimeout(() => {
@@ -17,7 +17,7 @@ window.addEventListener("keydown", function (event) {
      if (event.key === "e") {
        if (druhybodpouzit < leftstrana) {
          console.log("turbo");
-         options.rychlostmice = 44;
+         options.rychlostmice = 51;
          druhybodpouzit ++;
        }
        setTimeout(() => {

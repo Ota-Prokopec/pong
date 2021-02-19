@@ -1,5 +1,4 @@
 
-
 const playtwo = document.getElementById("play__two");
 let wantauto = false;
 let velkostskok = Math.floor(Math.random()*444) + 144;
@@ -30,7 +29,7 @@ const map = {
 /*first keydown event*/
 window.addEventListener("keydown", function (event) {
 
-  ////console.log(event);
+  //////console.log(event);
   if (event.key === "ArrowUp") {
            map.ArrowUP = true;
   }
@@ -75,6 +74,7 @@ function push() {
   if (wantauto) {
     auto();
   }
+  pohybstrely();
     klavesa();
       balles();
     coli();
@@ -99,9 +99,9 @@ function push() {
   }
   function coli() {
     const co = colisioninarray(playtwo, array);
-    //console.log(co[0], co[1], co[2]);
+    ////console.log(co[0], co[1], co[2]);
  if (co[1] && co[2] === "bottom" || co[1] && co[2] === "top") {
-   ////console.log(map.ArrowUP);
+   //////console.log(map.ArrowUP);
 
  }
  else {
@@ -119,8 +119,8 @@ function push() {
        playone.style.top = playone.offsetTop + 16 + "px";
      }
      if (co1[2] === "bottom") {
-       //console.log("ahoj");
-       //console.log("ahoj");
+       ////console.log("ahoj");
+       ////console.log("ahoj");
        playone.style.top = playone.offsetTop - 16 + "px";
      }
    }

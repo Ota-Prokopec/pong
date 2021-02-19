@@ -12,7 +12,7 @@ function colisioninarray(element, array) {
    element__left === array__left
    && element__bottom === array__bottom &&
     element__right === array__right;
-    //console.log(element__top > array__top && element__left > array__left && element__bottom < array__bottom && element__right > array__right);
+    ////console.log(element__top > array__top && element__left > array__left && element__bottom < array__bottom && element__right > array__right);
   if (colisionisnot) {
 
     return true;
@@ -55,7 +55,7 @@ function colision(element, secondelement) {
     const array__bottom = secondelement.offsetTop + secondelement.offsetHeight;
     const array__left = secondelement.offsetLeft;
 
-    ////console.log(el__right > array__left && array__right > el__left && el__top < array__bottom && array__top < el__bottom);
+    //////console.log(el__right > array__left && array__right > el__left && el__top < array__bottom && array__top < el__bottom);
     if ( el__right > array__left && array__right > el__left && el__top < array__bottom && array__top < el__bottom  ) {
       if (el__bottom < array__top + options.delkaodrazustrana) {
         nahoru(ball, "to top");

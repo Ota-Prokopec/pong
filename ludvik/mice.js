@@ -104,11 +104,10 @@ function wins() {
   }
 
 }
-function functionName() {
-
-}
+/*norfa, mod*/
 function rychlostmeneni() {
   //rychlostmic
+  if (norfa != undefined) {
   if (!norfa) {
     options.rychlostmice --;
     pomocna --;
@@ -117,13 +116,9 @@ function rychlostmeneni() {
     }
   if (pomocna < 4) {
     options.rychlostmice = 4;
-    pomocna = 11111111111;
-
-
-
-
-
+    pomocna = 144444444444444444444;
     createball();
+    //element.remove();
   }
   }
   else if (norfa) {
@@ -131,9 +126,12 @@ function rychlostmeneni() {
     if (options.rychlostmice < 4 || options.rychlostmice === 4) {
       options.rychlostmice = 4;
     }
-    console.log(options.rychlostmice);
-  }
+  }}
 
+  /*norfa, mod*/
+  /*norfa, mod*/
+  /*norfa, mod*/
+  /*norfa, mod*/
 
 }
 function nullthis() {

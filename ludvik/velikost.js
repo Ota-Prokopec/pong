@@ -9,13 +9,13 @@ window.addEventListener("load", function (event) {
   windowarray();
 })
 window.addEventListener("keydown", (e) => {
-  console.log(e);
+  //console.log(e);
   if (e.key === "F11") {
-    console.log("ahoj");
+    //console.log("ahoj");
     windowarray();
   }
   else if (e.key === "F12") {
-    console.log("ahoj");
+    //console.log("ahoj");
     windowarray();
   }
 })

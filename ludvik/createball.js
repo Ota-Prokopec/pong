@@ -17,7 +17,7 @@ function createball() {
   id:"colisionballforrychlost"
   }
   );
-  console.log(element);
+  //console.log(element);
   appendElement(array, element);
 }
 
@@ -30,7 +30,7 @@ function createball() {
       function colisionballforrychlost() {
         if (element != undefined) {
           const coliballelement = colision(ball, element);
-          console.log(coliballelement);
+          //console.log(coliballelement);
             if (!coliballelement) {
               options.rychlostmice = 44;
               pomocna = 44;
