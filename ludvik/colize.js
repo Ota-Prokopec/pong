@@ -57,11 +57,14 @@ function colision(element, secondelement) {
 
     //////console.log(el__right > array__left && array__right > el__left && el__top < array__bottom && array__top < el__bottom);
     if ( el__right > array__left && array__right > el__left && el__top < array__bottom && array__top < el__bottom  ) {
+      //console.log("colision");
       if (el__bottom < array__top + options.delkaodrazustrana) {
         nahoru(ball, "to top");
+        //console.log("top");
       }
       if (el__top > array__bottom - options.delkaodrazustrana) {
         nahoru(ball, "to bottom");
+        //console.log("bottom");
       }
       return false;
 

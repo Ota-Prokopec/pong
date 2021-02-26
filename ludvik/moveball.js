@@ -2,6 +2,7 @@
 
 
 function moveball(element, colision) {
+
    velkostskok = Math.floor(Math.random()*444);
   if (colision[1]) {
   }
@@ -28,11 +29,13 @@ function nahoru(element, value) {
 
 
 function tobottom() {
-  element.style.top = element.offsetTop + 1 + "px";
+    element.style.top = element.offsetTop + 5 + "px";
+  //console.log("bottom");
   //window.requestAnimationFrame(animation);
 }
 function totop() {
-  element.style.top = element.offsetTop - 1 + "px";
+  element.style.top = element.offsetTop - 4 + "px";
+  //console.log("top");
   //window.requestAnimationFrame(animation);
 }
 }

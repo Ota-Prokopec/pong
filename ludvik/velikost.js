@@ -24,7 +24,7 @@ function windowarray() {
         bod.style.left = width / 2 - 44*4 + "px";
         hra.style.left = width / 2 - 44 + "px";
         hra.style.height = height + "px"
-  array.style.height = height - 4 + "px";
-  array.style.width = width - 4 + "px";
+  array.style.height = height/* - 4*/ + "px";
+  array.style.width = width/* - 4*/ + "px";
   playtwo.style.left = width - 44 + "px";
 }

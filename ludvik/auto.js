@@ -9,6 +9,8 @@ document.getElementById("noauto").addEventListener("click", function (event) {
        zobrazeni();
 })
 function zobrazeni() {
+
+  posionstarttomobile();
   document.getElementById("options").style.display = "none";
   document.getElementById("start").style.display = "block";
 document.getElementById("wrap").style.display = "block";
@@ -20,12 +22,12 @@ function auto() {
            map.s = true;
          }
          else if (autohrac > 1) {
-           setTimeout(() => {map.s = true;}, 444);
+          map.s = true;
          }
 
        }
        else if  (ball.offsetHeight + ball.offsetTop < playone.offsetTop + 44) {
-         setTimeout(() => {map.w = true;}, 444);
+         map.w = true;
        }
        else {
          map.s = false;
@@ -34,3 +36,16 @@ function auto() {
 
 
 }
+
+
+
+
+                         function posionstarttomobile() {
+                           if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                             const start = document.getElementById("start");
+                             start.style.position = "relative";
+                             start.style.left = "371.4px";
+                }
+
+
+                         }

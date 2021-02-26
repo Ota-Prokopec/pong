@@ -32,7 +32,8 @@ function createball() {
           const coliballelement = colision(ball, element);
           //console.log(coliballelement);
             if (!coliballelement) {
-              options.rychlostmice = 44;
+              options.rychlostmice = pomocnarychlost;
+              element.remove();
               pomocna = 44;
             }
         }

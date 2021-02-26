@@ -11,11 +11,13 @@ let rightstarana = 0;
 let rightwin = 0;
 let leftwin = 0;
 function balles() {
+
   wins();
   const cooneside = colision(ball, playtwo);
   const cotwoside = colision(ball, playone);
 
-    removerequest = window.requestAnimationFrame(play);
+
+      play();
     function play() {
       colisionball = colisioninarray(ball, array);
      moveball(ball, colisionball);
@@ -138,7 +140,7 @@ function nullthis() {
   leftstrana = 0;
   rightstarana = 0;
   pomocna = 44;
-  options.rychlostmice = 44;
+  options.rychlostmice = pomocnarychlost;
   if (element != undefined) {
     element.remove();
   }

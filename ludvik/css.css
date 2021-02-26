@@ -4,6 +4,8 @@ body {
   display: grid;
 
   overflow: hidden;
+
+
   align-content: center;
   justify-content: center;
 }
@@ -29,7 +31,9 @@ div.score {
 div.all {
   height: 100vh;
   width: 100vw;
-  background: lightblue;
+  background: url(sea.jpg);
+  background-size: 100vw;
+  background-repeat: no-repeat;
 
 }
 div.options__start {
@@ -53,7 +57,10 @@ div.play__array {
   left:0px;
   height: 444px;
   width: 864px;
-  background: #000;
+
+  background: url(beach.jpg)    ;
+  background-size: 100vw;
+  background-repeat: no-repeat;
 }
 button.start {
   height: 44px;

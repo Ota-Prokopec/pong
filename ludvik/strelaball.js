@@ -64,7 +64,7 @@ function vytvorenistrely(element) {
               if (element != undefined) {
                 element.remove();
               }
-              options.rychlostmice = 44;
+              options.rychlostmice = pomocnarychlost;
               pomocna = 44;
               if (element != undefined) {
                 element.remove();

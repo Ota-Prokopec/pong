@@ -1,4 +1,3 @@
-
 const playtwo = document.getElementById("play__two");
 let wantauto = false;
 let velkostskok = Math.floor(Math.random()*444) + 144;
@@ -13,6 +12,7 @@ const options = {
   napodobeninaryhlost:44,
   win:4
 }
+const  pomocnarychlost = options.rychlostmice;
 let pomocna = 44;
 /*options*/
 const playone = document.getElementById("play__one");
@@ -84,17 +84,17 @@ function push() {
   function klavesa() {
     if (map.ArrowUP === true) {
       ////arrowup
-        playtwo.style.top = playtwo.offsetTop - 16 + "px";
+        playtwo.style.top = playtwo.offsetTop - options.rychlost__play + "px";
     }
     if (map.ArrowDown === true) {
       ////arrowdown
-      playtwo.style.top = playtwo.offsetTop + 16 + "px";
+      playtwo.style.top = playtwo.offsetTop + options.rychlost__play + "px";
     }
     if (map.s === true) {
-        playone.style.top = playone.offsetTop + 16 + "px";
+        playone.style.top = playone.offsetTop + options.rychlost__play + "px";
     }
     if (map.w === true) {
-      playone.style.top = playone.offsetTop - 16 + "px";
+      playone.style.top = playone.offsetTop - options.rychlost__play + "px";
     }
   }
   function coli() {
@@ -107,21 +107,21 @@ function push() {
  else {
    if (co[0] === "play__two") {
      if (co[2] === "top") {
-       playtwo.style.top = playtwo.offsetTop + 16 + "px";
+       playtwo.style.top = playtwo.offsetTop + options.rychlost__play + "px";
      }
      if (co[2] === "bottom") {
-       playtwo.style.top = playtwo.offsetTop - 16 + "px";
+       playtwo.style.top = playtwo.offsetTop - options.rychlost__play + "px";
      }
    }
     const co1 = colisioninarray(playone, array);
    if (co1[0] === "play__one") {
      if (co1[2] === "top") {
-       playone.style.top = playone.offsetTop + 16 + "px";
+       playone.style.top = playone.offsetTop + options.rychlost__play + "px";
      }
      if (co1[2] === "bottom") {
        ////console.log("ahoj");
        ////console.log("ahoj");
-       playone.style.top = playone.offsetTop - 16 + "px";
+       playone.style.top = playone.offsetTop - options.rychlost__play + "px";
      }
    }
    }
